@@ -1,3 +1,15 @@
+---
+layout: cover
+cover:
+  text: |
+    <h1 id="personal-field-parent">I am <span id="personal-field" class="typing-blink">Simon Chuu.</span></h1>
+    <p>Yet there's much more to learn out there.  Please excuse the apparence while this site goes through construction!</p>
+    <button class="btn btn-lg btn-secondary">Just a fancy button</button>
+  image: /res/img/cover.jpg
+html:
+  script: [/res/js/home-typing.js]
+---
+
 ## Welcome to GitHub Pages
 
 You can use the [editor on GitHub](https://github.com/SimonOrJ/website/edit/master/index.md) to maintain and preview the content for your website in Markdown files.

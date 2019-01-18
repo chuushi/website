@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+{% include head.html %}
+    <link rel="stylesheet" href="/res/css/cover.css">
+  </head>
+  <body>
+{% include navbar.html %}
+    <div class="cover"{% if page.cover.image %} style="background-image: url('{{ page.cover.image }}');"{% endif %}>
+      <div class="darken">
+        <div class="cover-container d-flex w-100 vh-100 p-3 mx-auto flex-column text-center">
+          <header class="m-auto">
+            <div class="inner">
+{{ page.cover.text }}
+            </div>
+          </header>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+{{ content }}
+    </div>
+{% include script.html %}
+    <script src="/res/js/cover.js"></script>
+  </body>
+</html>
