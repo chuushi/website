@@ -1,0 +1,9 @@
+<div class="card">
+  {% if include.post.image %}<img class="card-img-top" src="{{ include.post.image }}" alt="Card image cap">{% endif %}
+  <div class="card-body">
+    <h5 class="card-title">{{ include.post.title }}</h5>
+    <div class="card-subtitle mb-2 text-muted">{{ include.post.date | date: "%Y.%m.%d" }}</div>
+    <div class="card-text">{{ include.post.content | strip_html | truncatewords: 30 }}</div>
+    <a class="btn btn-secondary mt-2" href="{{ include.post.url }}">Read more</a>
+  </div>
+</div>
