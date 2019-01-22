@@ -4,3 +4,26 @@
 body {
   margin-top: calc(1rem + 40px);
 }
+
+/*
+ * home-typing.js stuff
+ */
+
+@keyframes blink {
+  40% { border-color: white; }
+  52% { border-color: rgba(0,0,0,0); }
+  88% { border-color: rgba(0,0,0,0); }
+  100% { border-color: white; }
+}
+.typing-blink {
+  animation: blink 1100ms linear infinite;
+}
+
+#personal-field-parent {
+  white-space: pre-wrap;
+}
+
+#personal-field {
+  border-right: 2px solid white;
+}
+

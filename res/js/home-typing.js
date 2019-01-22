@@ -2,6 +2,8 @@
 "use strict";
 
 var field = $("#personal-field");
+if (field.length === 0)
+    return;
 
 var blinkClass = "typing-blink";
 var list = [

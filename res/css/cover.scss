@@ -8,67 +8,68 @@ body {
 }
 
 /*
- * home-typing.js stuff
+ * Cover
  */
 
-@keyframes blink {
-  40% { border-color: #fff; }
-  52% { border-color: rgba(0,0,0,0); }
-  88% { border-color: rgba(0,0,0,0); }
-  100% { border-color: #fff; }
-}
-.typing-blink {
-  animation: blink 1100ms linear infinite;
+.parallax {
+  background-attachment: fixed;
+  
 }
 
-#personal-field-parent {
-  white-space: pre-wrap;
-}
-
-#personal-field {
-  border-right: 2px solid #fff;
-}
-
-/* Links */
-.cover a,
-.cover a:focus,
-.cover a:hover {
-  color: #fff;
-}
-
-/* Custom default button */
-.cover .btn-secondary,
-.cover .btn-secondary:hover,
-.cover .btn-secondary:focus {
-  color: #333;
-  text-shadow: none;
-  background-color: #fff;
-  border: .05rem solid #fff;
-}
-
-
-/*
- * Base structure
- */
-
-.cover {
-  background-size: cover;
+#cover {
+  position: relative;
+  overflow: hidden;
+  color: white;
   background-color: #333;
-  color: #fff;
   text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
-  box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
-}
 
-.darken {
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  .cover-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  
+  .darken {
+    position: absolute;
+    box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+  }
+  
+  .cover-container {
+    position: relative;
+  }
+  
+  /* Custom default button */
+  .btn-secondary, .btn-secondary:hover, .btn-secondary:focus {
+    color: #333;
+    text-shadow: none;
+    background-color: white;
+    border: .05rem solid white;
+  }
+  
+  /* Links */
+  a, a:focus, a:hover {
+    color: white;
+  }
+
 }
 
 .cover-container {
   max-width: 42em;
 }
 
+.darken {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/*
+ * Cover Navbar
+ */
+/* For navbar animation */
 .roam-navbar {
   transition: margin-top 500ms ease-out 0s;
   top: calc(-1rem - 40px);
@@ -78,28 +79,25 @@ body {
 .cover-navbar {
   position: absolute;
   background-color: initial!important;
-}
 
-/*
- * Navbar
- */
-.cover-navbar .nav-link {
-  padding: .25rem 0;
-  margin: 0 .5rem;
-  font-weight: 700;
-  color: rgba(255, 255, 255, .5);
-  background-color: transparent;
-  border-bottom: .25rem solid transparent;
-}
+  .nav-link {
+    padding: .25rem 0;
+    margin: 0 .5rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, .5);
+    background-color: transparent;
+    border-bottom: .25rem solid transparent;
+  }
 
-.cover-navbar .nav-link:hover {
-  border-bottom-color: rgba(255, 255, 255, .25);
-}
-.cover-navbar .nav-link:focus {
-  border-bottom-color: rgba(255, 255, 255, .5);
-}
+  .nav-link:hover {
+    border-bottom-color: rgba(255, 255, 255, .25);
+  }
+  .nav-link:focus {
+    border-bottom-color: rgba(255, 255, 255, .5);
+  }
 
-.cover-navbar .active {
-  color: #fff;
-  border-bottom-color: #fff;
+  .active {
+    color: white;
+    border-bottom-color: white;
+  }
 }
