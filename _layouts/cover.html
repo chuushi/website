@@ -4,15 +4,27 @@
 {% include head.html %}
     <link rel="stylesheet" href="/res/css/cover.css">
   </head>
-  <body>
+  <body class="full-cover">
 {% include navbar.html %}
-    <div id="cover">
-{% if page.cover.image %}
-      <div class="cover-image" style="background-image: url('{{ page.cover.image }}');">
+    <div id="cover" class="vh-100">
+{% if page.cover.image.first %}
+      <div class="carousel slide carousel-fade cover-parallax" data-ride="carousel">
+        <div class="carousel-inner">
+  {% for image in page.cover.image %}
+          <div class="carousel-item{% if forloop.first %} active{% endif %}">
+            <div class="d-block cover-image" style="background-image: url('{{ image }}');">
+            </div>
+          </div>
+  {% endfor %}
+        </div>
+        <div class="darken"></div>
+      </div>
+{% else if page.cover.image %}
+      <div class="cover-image cover-parallax" style="background-image: url('{{ page.cover.image }}');">
         <div class="darken"></div>
       </div>
 {% endif %}
-      <div class="cover-container d-flex w-100 vh-100 p-3 mx-auto flex-column text-center">
+      <div class="cover-container d-flex p-3 mx-auto flex-column text-center">
         <header class="m-auto">
           <div class="inner">
 {{ page.cover.text }}

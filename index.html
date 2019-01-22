@@ -5,7 +5,7 @@ cover:
     <h1>I am Simon Chuu.</h1>
     <p>There's much more to learn out there.  Please excuse the apparence while this site goes through construction!</p>
     <a class="btn btn-lg btn-secondary smooth-scroll" role="button" href="#content">More about me</a>
-  image: /res/img/cover.jpg
+  image: /res/img/manhattan1.jpg
 html:
   script: [/res/js/home-typing.js]
 ---
@@ -14,9 +14,11 @@ html:
 
 <h1>Blog posts</h1>
 
+<div class="card-deck">
 {% for post in site.posts %}
-{% include post-blurb.html post=post %}
+{% include post-cards.html post=post %}
 {% endfor %}
+</div>
 
 <p>Website design &copy; Simon Chuu. Hosted on GitHub Pages. Powered by Jekyll.</p>
 <p>TODO: Move these lines to the Footer.html or similar</p>

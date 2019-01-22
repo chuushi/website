@@ -10,21 +10,23 @@ body {
 /*
  * Cover
  */
-
-.parallax {
-  background-attachment: fixed;
-  
-}
-
 #cover {
   position: relative;
   overflow: hidden;
   color: white;
-  background-color: #333;
   text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+  background-color: #777;
+
+  &.post-cover {
+    height: 640px;
+    
+    .post-title {
+      margin-bottom: 1rem;
+      margin-top: auto;
+    }
+  }
 
   .cover-image {
-    position: absolute;
     width: 100%;
     height: 100%;
     background-repeat: no-repeat;
@@ -32,13 +34,28 @@ body {
     background-size: cover;
   }
   
+  .cover-parallax {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .carousel-inner, .carousel-item {
+    height: 100%;
+  }
+  
   .darken {
     position: absolute;
+    top: 0;
+    height: 100%;
+    z-index: 10;
     box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
   }
   
   .cover-container {
     position: relative;
+    height: 100%;
+    z-index: 10;
   }
   
   /* Custom default button */
@@ -56,14 +73,14 @@ body {
 
 }
 
-.cover-container {
+body.full-cover .cover-container {
   max-width: 42em;
 }
 
 .darken {
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 /*

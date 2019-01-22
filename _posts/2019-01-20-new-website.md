@@ -1,8 +1,7 @@
 ---
 layout: post
 title: "Welcome to Jekyll!"
-image: /res/img/cover.jpg
-categories: [first post]
+image: /res/img/niagara1.jpg
 tags: [meta]
 ---
 
